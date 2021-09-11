@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var moveSpeed = 500
 
-
+# hi
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
