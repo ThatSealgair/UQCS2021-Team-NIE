@@ -4,6 +4,7 @@ using Godot;
 
 /// <summary>
 /// We need to put this onto the player
+/// 
 /// </summary>
 
 public class PlayerMovement : Area2D{
@@ -15,15 +16,18 @@ public class PlayerMovement : Area2D{
     public override void _Ready()
     {
         string name = Name.ToLower();
-        _up = name + "_move_up";
-        _down = name + "_move_down";
-        _right = name + "_move_right";
-        _left = name + "_move_left";
+        _up = name + "move_up";
+        _down = name + "move_down";
+        _right = name + "move_right";
+        _left = name + "move_left";
+        _interact = ;
+        _drop = ;
+        _swap = ;
     }
 
-    void Update()
+    public override void _Process(float delta)
     {
-        if (Moving == false)
+        if (!Moving)
         {
             input.y = Input.GetActionStrength(_up) - Input.GetActionStrength(_down);
             input.x = Input.GetActionStrength(_right) - input.GetActionStrength(_left);
@@ -32,16 +36,43 @@ public class PlayerMovement : Area2D{
             {
                 Moving = true;
                 //We want to find player postion needs a property position which is 
+                //Note we may want to edit the amount that input.x or input.y is scaled
                 Vector2 TargetPosition = Position;
                 TargetPosition.x += input.x;
                 TargetPosition.y += input.y;
 
                 //We want a Corountine so that we can animate
-                StartCoroutine(Movement(TargetPosition));
+                if (Unblocked)
+                {
+                    StartCoroutine(Movement(TargetPosition, delta));
+                }
             }
         }
+
+        float interact = Input.GetActionStrength(_interact);
+        float drop = Input.GetActionStrength(_drop);
+        float swap = Input.GetActionStrength(_swap);
+        if (interact)
+        {
+            
+        }
+        else if (drop)
+        {
+            Inventory.Remove();
+        }
+        else if (swap)
+        {
+
+        }
     }
-    IEnumerator Movement(Vector2 TargetPosition)
+
+    private bool Unblocked()
+    {
+
+        //Add code to check that the player can move to the position directly infront of it
+    } 
+
+    IEnumerator Movement(Vector2 TargetPosition, float delta)
     {
         Moving = true;
         Vector2 position = Position;
@@ -49,9 +80,9 @@ public class PlayerMovement : Area2D{
         //Start an animation here!
 
         //Again no idea if this cool, I want to fin the magnitude of the vector, hope GoDot has this property
-        while (Vector2.Magnitude(TargetPosition - playerPosition) > 0.00001)
+        while (Vector2.abs(TargetPosition - playerPosition) > 0.00001)
         {
-            float step = movementSpeed * Time.deltaTime;
+            float step = movementSpeed * delta;
             //check if MoveTowards exists 
             position = playerPosition + (TargetPosition-playerPosition)*step;
             Position = position;
