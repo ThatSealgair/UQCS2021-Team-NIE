@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Godot;
 
 /// <summary>
+/// We need to put this onto the player
 /// </summary>
 
 public class PlayerMovement : Area2D{
@@ -38,7 +39,6 @@ public class PlayerMovement : Area2D{
                 //We want a Corountine so that we can animate
                 StartCoroutine(Movement(TargetPosition));
             }
-
         }
     }
     IEnumerator Movement(Vector2 TargetPosition)
