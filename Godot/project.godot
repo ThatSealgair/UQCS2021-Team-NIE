@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="UQCS2021-Team-NIE"
-run/main_scene="res://Classes/Hitbox/Player_Scene/Player_Kinematic2D.tscn"
+run/main_scene="res://Classes/Player/Player_Scene/Player_Kinematic2D.tscn"
 config/icon="res://icon.png"
 
 [display]
