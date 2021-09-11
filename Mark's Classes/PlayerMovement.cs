@@ -28,6 +28,7 @@ public class PlayerMovement : Area2D{
 
     public override void _Process(float delta)
     {
+        // TODO: #4 Specify Moving
         if (!Moving)
         {
             input.y = Input.GetActionStrength(_up) - Input.GetActionStrength(_down);
