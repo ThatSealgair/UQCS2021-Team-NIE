@@ -12,6 +12,7 @@ public class PlayerMovement : Area2D{
     private Vector2 input;
     private string _up, _down, _right, _left;
     public const float movementSpeed = 2;
+    public Area2D area = this;
 
     public override void _Ready()
     {
@@ -20,9 +21,9 @@ public class PlayerMovement : Area2D{
         _down = name + "move_down";
         _right = name + "move_right";
         _left = name + "move_left";
-        _interact = ;
-        _drop = ;
-        _swap = ;
+        _interact = "j";
+        _drop = "k";
+        _swap = "l";
     }
 
     public override void _Process(float delta)
@@ -30,7 +31,7 @@ public class PlayerMovement : Area2D{
         if (!Moving)
         {
             input.y = Input.GetActionStrength(_up) - Input.GetActionStrength(_down);
-            input.x = Input.GetActionStrength(_right) - input.GetActionStrength(_left);
+            input.x = Input.GetActionStrength(_right) - Input.GetActionStrength(_left);
             //Want to compare input to zero Vector Not idea if Gidot has
             if (input != Vector2(0.0,0.0))
             {
@@ -49,12 +50,12 @@ public class PlayerMovement : Area2D{
             }
         }
 
-        float interact = Input.GetActionStrength(_interact);
-        float drop = Input.GetActionStrength(_drop);
-        float swap = Input.GetActionStrength(_swap);
+        bool interact = Input.IsActionJustPressed(_interact);
+        bool drop = Input.IsActionJustPressed(_drop);
+        bool swap = Input.IsActionJustPressed(_swap);
         if (interact)
         {
-            
+            PlayerThings.Interaction(area);
         }
         else if (drop)
         {
@@ -62,13 +63,13 @@ public class PlayerMovement : Area2D{
         }
         else if (swap)
         {
-
+            Inventory.Switch();
         }
     }
 
     private bool Unblocked()
     {
-
+        return true
         //Add code to check that the player can move to the position directly infront of it
     } 
 
