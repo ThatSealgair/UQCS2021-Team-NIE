@@ -1,6 +1,7 @@
 extends Node2D
 
 var hackerSpawn = Vector2()
+var spawnPointArray : Array = []
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
