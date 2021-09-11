@@ -9,35 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
-<<<<<<< HEAD
 "base": "Area2D",
 "class": "Hacker",
 "language": "GDScript",
 "path": "res://Classes/Hacker/Hacker_Draft_1.gd"
 }, {
-=======
->>>>>>> 762baeca755e724661e7a1100ddde95d584c91d1
 "base": "Node2D",
 "class": "Resource_Item",
 "language": "GDScript",
 "path": "res://Classes/Resource/Resource_Item.gd"
 } ]
 _global_script_class_icons={
-<<<<<<< HEAD
 "Hacker": "",
-=======
->>>>>>> 762baeca755e724661e7a1100ddde95d584c91d1
 "Resource_Item": ""
 }
 
 [application]
 
 config/name="UQCS2021-Team-NIE"
-<<<<<<< HEAD
 run/main_scene="res://Classes/Player/Player_Scene/Player_Kinematic2D.tscn"
-=======
-run/main_scene="res://Classes/Hitbox/Player_Scene/Player_Kinematic2D.tscn"
->>>>>>> 762baeca755e724661e7a1100ddde95d584c91d1
 config/icon="res://icon.png"
 
 [display]

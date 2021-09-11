@@ -8,6 +8,7 @@ var need_timer_spawn = RandomNumberGenerator.new()
 var leave = false
 var rng_needs_index : int
 var rng_need_spawn : int
+var hacker_need : String
 onready var timer1 = get_node("Timer1")
 onready var timer2 = get_node("Timer2")
 
@@ -20,7 +21,7 @@ func _ready():
 func _wants():
 	item_need_no.randomize()
 	rng_needs_index = item_need_no.randi_range(0, 3)
-	var hacker_need : String = needs_dict[rng_needs_index]
+	hacker_need = needs_dict[rng_needs_index]
 	timer1.set_wait_time(5)
 	timer1.start()
 
