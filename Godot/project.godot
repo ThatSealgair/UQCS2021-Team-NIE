@@ -8,9 +8,20 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Resource_Item",
+"language": "GDScript",
+"path": "res://Classes/Resource/Resource_Item.gd"
+} ]
+_global_script_class_icons={
+"Resource_Item": ""
+}
+
 [application]
 
-config/name="Hackerthon The Experience"
+config/name="UQCS2021-Team-NIE"
+run/main_scene="res://Main_Window/Main_Window_Scene.tscn"
 config/icon="res://icon.png"
 
 [physics]
