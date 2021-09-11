@@ -22,7 +22,4 @@ public class PlayerThings : Area2D
         }
         //there is nothing to interact with
     }
-
-
-
 }
