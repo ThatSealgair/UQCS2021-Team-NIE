@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Hacker",
 "language": "GDScript",
-"path": "res://src/Hacker_Draft_1.gd"
+"path": "res://src/Entity/Hacker_Draft_1.gd"
 }, {
 "base": "Node2D",
 "class": "Resource_Item",
