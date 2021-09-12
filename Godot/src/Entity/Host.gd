@@ -1,4 +1,5 @@
 extends KinematicBody2D
+<<<<<<< HEAD
 class_name Host
 
 var AreasOverlapping
@@ -12,6 +13,13 @@ var _2d_velocity : = Vector2.ZERO
 func _ready():
 	inventory = Inventory.new()
 
+=======
+
+export var linear_speed : = Vector2(300.0, 300.0)
+
+var _2d_velocity : = Vector2.ZERO
+
+>>>>>>> main
 func _physics_process(delta: float) -> void:
 	var direction : = Vector2(
 		Input.get_action_strength("right") - Input.get_action_strength("left"),
@@ -19,6 +27,7 @@ func _physics_process(delta: float) -> void:
 	)
 	_2d_velocity= linear_speed * direction
 	_2d_velocity = move_and_slide(_2d_velocity)
+<<<<<<< HEAD
 
 	
 func _input(event):
@@ -34,3 +43,5 @@ func _input(event):
 			inventory.Switch()
 		if event.pressed and event.scancode == KEY_K:
 			inventory.Drop()
+=======
+>>>>>>> main

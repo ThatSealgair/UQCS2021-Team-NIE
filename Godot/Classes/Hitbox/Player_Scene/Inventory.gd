@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -12,26 +13,40 @@ var Item2: String
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+=======
+# const hacker = preload("res://Classes/Hacker/Hacker_Draft_1.gd")
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+>>>>>>> main
 var Item1 = null
 var Item2 = null
 var inventory = {'item1': Item1, 'item2': Item2}
 var Hacker = Hacker.new()
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> main
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 func _process(delta):
 	pass
+=======
+# func _process(delta):
+#	pass
+# TODO: Why need process?
+>>>>>>> main
 
 func Drop():
-	Item1 = Item2;
-	Item2 = "";
-	pass
+	inventory['item1'] = null
 	
 func Switch():
+<<<<<<< HEAD
 	var ItemP = Item1;
 	Item1 = Item2;
 	Item2 = ItemP;
@@ -68,6 +83,22 @@ func interact(type, Item: String):
 		else:
 			Item2 = Item
 >>>>>>> master
+=======
+	inventory['item1'] = Item2
+	inventory['item2'] = Item1
+
+func interact(type, Item: String):
+	if type == 'Hacker':
+		for item_index in inventory:
+			var item = inventory['item_index']
+			if Item == item:
+				pass
+	if Item2 != null:
+		if Item1 != null:
+			Item1 = Item
+		else:
+			Item2 = Item
+>>>>>>> main
 	else:
 		return false
 	return true

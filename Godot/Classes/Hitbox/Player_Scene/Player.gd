@@ -5,6 +5,7 @@ var moveSpeed = 500
 var AreasOverlapping
 var Item: String
 <<<<<<< HEAD
+<<<<<<< HEAD
 var Inventory
 var hacker : bool
 
@@ -18,6 +19,14 @@ var test = "Hacker"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+=======
+var area = Area2D
+var Inventory = inventory.new()
+var test = "Hacker"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+>>>>>>> main
 	area = get_node("Area2D")
 >>>>>>> master
 	pass # Replace with function body.
@@ -41,6 +50,7 @@ func _input(event):
 	if event is InputEventKey and not event.is_echo():
 		if event.pressed and event.scancode == KEY_J:
 <<<<<<< HEAD
+<<<<<<< HEAD
 			print_debug("J was pressed")
 			if hacker:
 				print_debug("true")
@@ -50,6 +60,8 @@ func _input(event):
 			#else if false:
 				Inventory.AddNew("Cheese")
 =======
+=======
+>>>>>>> main
 			if name == "Hacker":
 				for item_index in Inventory.inventory:
 					var item = Inventory.inventory['item_index']
@@ -59,7 +71,10 @@ func _input(event):
 				#give the player Item
 			else:
 				Inventory.AddNew(name)
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> main
 		if event.pressed and event.scancode == KEY_L:
 			Inventory.Switch()
 		if event.pressed and event.scancode == KEY_K:
