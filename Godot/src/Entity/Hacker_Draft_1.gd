@@ -11,6 +11,7 @@ var rng_need_spawn : int
 var hacker_need : String
 onready var need_timer = get_node("Need_Timer")
 onready var want_timer = get_node("Want_Timer")
+onready var anim_hacker : AnimationPlayer = get_node("AnimationPlayer")
 
 func _ready():
 	need_timer_spawn.randomize()
@@ -25,9 +26,9 @@ func _wants():
 	# Add integration to player.
 	need_timer.set_wait_time(5)
 	need_timer.start()
+	
+func _on_Need_Timer_timeout():
+	anim_hacker.play('Fade Out')
 
-func _on_Timer_timeout():
-	leave = true
-
-func _on_want_timer_timeout():
+func _on_Want_timer_timeout():
 	_wants()
