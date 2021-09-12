@@ -10,7 +10,10 @@ extents = Vector2( 26, 35 )
 extents = Vector2( 28, 36 )
 
 [node name="Host_Kinematic" type="KinematicBody2D"]
+<<<<<<< HEAD
+=======
 collision_mask = 22
+>>>>>>> main
 script = ExtResource( 2 )
 
 [node name="Host Sprite" type="Sprite" parent="."]
