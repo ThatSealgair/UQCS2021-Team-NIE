@@ -1,10 +1,26 @@
 extends KinematicBody2D
 
-export var linear_speed : float = 300.0
+var moveSpeed = 500
 
-var _2d_velocity : = Vector2.ZERO
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
 
-func _physics_process(delta: float) -> void:
-	_2d_velocity.x += linear_speed * delta
-	_2d_velocity.y += linear_speed * delta
-	_2d_velocity = move_and_slide(_2d_velocity)
+func _physics_process(delta):
+	var motion = Vector2()
+
+	if Input.is_action_pressed("up"):
+		motion.y -= 1
+	if Input.is_action_pressed("down"):
+		motion.y += 1
+	if Input.is_action_pressed("left"):
+		motion.x -= 1
+	if Input.is_action_pressed("right"):
+		motion.x += 1
+	
+	motion = motion.normalized()
+	move_and_slide(motion * moveSpeed)
+
+func _on_players_area_area_entered(area):
+	print(area)
+	

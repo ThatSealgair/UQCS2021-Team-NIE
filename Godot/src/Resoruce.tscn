@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Sprite_Image/Item.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[node name="Resource" type="Area2D" groups=[
+"Resource",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -21 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="Item" type="Sprite" parent="."]
+position = Vector2( 1.19209e-07, -21 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 1 )
