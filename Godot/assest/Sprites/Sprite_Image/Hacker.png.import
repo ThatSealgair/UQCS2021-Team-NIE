@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hacker.png-49b18276aeab94c4a8d631452459b757.stex"
+path="res://.import/Hacker.png-c665e32ee96f9ab69102970ece8a5c90.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Sprite_Image/Hacker.png"
-dest_files=[ "res://.import/Hacker.png-49b18276aeab94c4a8d631452459b757.stex" ]
+source_file="res://assest/Sprites/Sprite_Image/Hacker.png"
+dest_files=[ "res://.import/Hacker.png-c665e32ee96f9ab69102970ece8a5c90.stex" ]
 
 [params]
 
