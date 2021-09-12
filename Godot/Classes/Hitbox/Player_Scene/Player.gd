@@ -14,7 +14,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	var motion = Vector2.ZERO
+	var motion = Vector2()
 
 	if Input.is_action_pressed("up"):
 		motion.y -= 1
