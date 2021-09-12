@@ -6,6 +6,7 @@
 extents = Vector2( 9, 9 )
 
 [node name="Table_Static" type="StaticBody2D"]
+collision_layer = 4
 
 [node name="Table" type="Sprite" parent="."]
 texture = ExtResource( 1 )

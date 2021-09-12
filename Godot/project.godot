@@ -58,6 +58,14 @@ right={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Host"
+2d_physics/layer_2="Hacker"
+2d_physics/layer_3="Table"
+2d_physics/layer_4="Resource"
+2d_physics/layer_5="World"
+
 [physics]
 
 common/enable_pause_aware_picking=true
