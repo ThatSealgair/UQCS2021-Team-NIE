@@ -9,61 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
 "base": "Area2D",
 "class": "Hacker",
 "language": "GDScript",
 "path": "res://src/Entity/Hacker_Draft_1.gd"
 }, {
-<<<<<<< HEAD
-"base": "KinematicBody2D",
-"class": "Host",
-"language": "GDScript",
-"path": "res://src/Entity/Host.gd"
-}, {
-"base": "Node2D",
-"class": "Inventory",
-"language": "GDScript",
-"path": "res://src/Entity/Inventory.gd"
-}, {
->>>>>>> master
-=======
->>>>>>> main
 "base": "Node2D",
 "class": "Resource_Item",
 "language": "GDScript",
 "path": "res://Classes/Resource/Resource_Item.gd"
 } ]
 _global_script_class_icons={
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "Hacker": "",
-"Host": "",
-"Inventory": "",
->>>>>>> master
-=======
-"Hacker": "",
->>>>>>> main
 "Resource_Item": ""
 }
 
 [application]
 
 config/name="UQCS2021-Team-NIE"
-<<<<<<< HEAD
-<<<<<<< HEAD
-run/main_scene="res://Classes/Hitbox/Player_Scene/Player_Kinematic2D.tscn"
-=======
 run/main_scene="res://src/Entity/Host.tscn"
->>>>>>> master
-=======
-run/main_scene="res://src/Entity/Host.tscn"
->>>>>>> main
 config/icon="res://icon.png"
 
 [display]
