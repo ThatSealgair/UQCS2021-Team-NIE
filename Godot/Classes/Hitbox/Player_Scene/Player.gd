@@ -4,13 +4,12 @@ const inventory = preload("res://Classes/Hitbox/Player_Scene/Inventory.gd")
 var moveSpeed = 500
 var AreasOverlapping
 var Item: String
-var area = Area2D
 var Inventory
+var hacker : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Inventory = inventory.new() 
-	area = get_node("Area2D")
 	pass # Replace with function body.
 
 func _physics_process(delta):
@@ -31,15 +30,16 @@ func _physics_process(delta):
 func _input(event):
 	if event is InputEventKey and not event.is_echo():
 		if event.pressed and event.scancode == KEY_J:
-			AreasOverlapping = area.get_overlapping_bodies()
-			for Name in AreasOverlapping:
-				if Name.name == "Hacker":
-					Item = Inventory.Item1
-					Inventory.Drop()
-					#give the player Item
-				else:
-					Inventory.AddNew(Name.name)
+			print_debug("J was pressed")
+			if hacker:
+				print_debug("true")
+				Item = Inventory.Item1
+				Inventory.Drop()
+				#give the player Item
+			#else if false:
+				Inventory.AddNew("Cheese")
 		if event.pressed and event.scancode == KEY_L:
 			Inventory.Switch()
 		if event.pressed and event.scancode == KEY_K:
 			Inventory.Drop()
+

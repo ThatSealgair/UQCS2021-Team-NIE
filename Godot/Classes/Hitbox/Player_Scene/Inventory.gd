@@ -26,6 +26,7 @@ func Switch():
 	pass
 	
 func AddNew(Item:String):
+	print_debug("Add")
 	if Item2 == "":
 		if Item1 == "":
 			Item1 = Item;
