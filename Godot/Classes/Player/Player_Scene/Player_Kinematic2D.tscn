@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 [gd_scene load_steps=4 format=2]
+=======
+[gd_scene load_steps=5 format=2]
+>>>>>>> Hacker_Draft
 
 [ext_resource path="res://Sprites/Sprite_Image/Player.png" type="Texture" id=1]
-[ext_resource path="res://Classes/Hitbox/Player_Scene/Player.gd" type="Script" id=2]
+[ext_resource path="res://Classes/Player/Player_Scene/Player.gd" type="Script" id=2]
+[ext_resource path="res://Classes/Hitbox/Hitbox.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 33, 34 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 23.5204, 25.8274 )
@@ -15,7 +23,19 @@ script = ExtResource( 2 )
 position = Vector2( 1.35525e-20, -27 )
 scale = Vector2( 8.66667, 9 )
 texture = ExtResource( 1 )
+<<<<<<< HEAD
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 0, -26 )
 shape = SubResource( 1 )
+=======
+centered = false
+
+[node name="Hitbox" parent="Player" instance=ExtResource( 3 )]
+
+[node name="CollisionShape2D" parent="Player/Hitbox" index="0"]
+position = Vector2( 26, 27 )
+shape = SubResource( 1 )
+
+[editable path="Player/Hitbox"]
+>>>>>>> Hacker_Draft
